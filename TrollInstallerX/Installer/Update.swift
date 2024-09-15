@@ -57,7 +57,7 @@ func getUpdatedTrollStore() async {
     while !doneChecking { }
     if outOfDate {
         do {
-            let newFile = try await downloadFile(from: URL(string: "https://github.com/opa334/TrollStore/releases/latest/download/TrollStore.tar")!)
+            let newFile = try await downloadFile(from: URL(string: "https://gh.duckcc.com/https://github.com/opa334/TrollStore/releases/latest/download/TrollStore.tar")!)
             print("Done downloading")
             let newURL = newFile
             print("New: \(newURL.path)")
