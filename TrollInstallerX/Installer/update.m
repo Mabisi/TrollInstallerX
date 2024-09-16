@@ -9,7 +9,7 @@
 
 void github_fetchLatestVersion(NSString* repo, void (^completionHandler)(NSString* latestVersion))
 {
-    NSString* urlString = [NSString stringWithFormat:@"https://api.github.com/repos/%@/releases/latest", repo];
+    NSString* urlString = [NSString stringWithFormat:@"https://gh.duckcc.com/https://api.github.com/repos/%@/releases/latest", repo];
     NSURL* githubLatestAPIURL = [NSURL URLWithString:urlString];
 
     NSURLSessionDataTask* task = [NSURLSession.sharedSession dataTaskWithURL:githubLatestAPIURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
